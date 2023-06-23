@@ -18,7 +18,8 @@ namespace
 }
 
 //定数定義のまとめ
-//namespace(名前空間)の中に入れる
+//namespace(無名名前空間 名前が設定されていないnamespace)の中に入れる
+//無名名前空間の中に書いてある変数や定数、関数はそのソースコードのみで有効
 namespace
 {
 	//基本的に定数はconstexprで定義する
@@ -31,6 +32,10 @@ namespace
 
 }	//namespace終了時セミコロン不要
 
+namespace
+{
+	constexpr int kEnemyNum = 16;
+}
 //文字列を定数として定義したい
 const char* const kConstText = "定数として定義された文字列";
 const char* const kFileName = "data/image.png";		//ファイル名を定義する
